@@ -1,0 +1,74 @@
+@import url('https://fonts.googleapis.com/css2?family=Lobster&display=swap');
+
+.navbar{
+    background: #333333;
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+    height: 118px;
+    /* margin-top: 40px; */
+    /* left: 100px; */
+    /* gap: 269px; */
+}
+
+.bg-body-light img{
+    width: 90px;
+    height: 118px;
+    margin-top: 25px;
+}
+
+.logo-name{
+    /* width: 94px;
+    height: 60px; */
+    font-family: Lobster;
+    font-size: 48px;
+    font-weight: 400;
+    line-height: 60px;
+    text-align: left;
+    color: white !important;
+    margin-top: 20px; 
+
+}
+
+.nav-menu{
+    display: flex;
+    align-items: center;
+    list-style: none;
+    gap: 194px;
+}
+
+.nav-cart{
+    width: 76px;
+    height: 42px;
+    gap: 0px;
+    border-radius: 5px 0px 0px 0px;
+    border: 1px 0px 0px 0px;
+    opacity: 0px;
+    background: linear-gradient(93.91deg, rgba(255, 255, 255, 0.5) -6.18%, rgba(255, 255, 255, 0.4) 101.3%);
+    align-items: center;
+    justify-content: center;
+    border: 1px solid;
+    border-image-source: linear-gradient(90deg, rgba(255, 255, 255, 0.5) 0%, rgba(153, 153, 153, 0.5) 100%);
+    box-shadow: 0px 20px 40px 0px #0000001A;
+}
+
+.me-auto{
+    width: 330px;
+    height: 39px;
+    gap: 10px;
+    opacity: 0px;
+    font-family: 'Work Sans';
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 18.77px;
+    text-align: left;
+    color: #FFFFFF !important;
+}
+
+.nav-link{
+    color: #FFFFFF !important;
+}
+
+.nav-link:hover {
+    color: #ddd !important;
+}
