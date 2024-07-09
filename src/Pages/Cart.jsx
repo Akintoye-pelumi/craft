@@ -4,6 +4,7 @@ import cart2 from '../Component/Assets/cart2.png'
 import cart1 from '../Component/Assets/cart1.png'
 import cart3 from '../Component/Assets/cart3.png'
 import Dropdown from '../Component/Dropdown'
+import {Link} from 'react-router-dom'
 
 const Cart = () => {
   return (
@@ -75,8 +76,10 @@ const Cart = () => {
             <p>₦2,906,898</p>
         </div>
         </div>
-        
+        <Link to='/payment'>
         <button>Proceed to Checkout</button>
+        </Link>
+        
       </div>
     </div>
   )

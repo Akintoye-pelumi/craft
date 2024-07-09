@@ -3,7 +3,7 @@ const data_products = [
     {
       id: 1,
       // image: '../Assets/chair.png',
-      image: chair,
+      image: 'Itempic/19.png',
       description: 'A cozy, modern sofa perfect for any living room.',
       price: "₦700,999",
     },
@@ -16,7 +16,7 @@ const data_products = [
     },
     {
       id: 3,
-      image: chair,
+      image: 'Itempic/20.png',
       description: 'A perfect blend of comfort and contemporary style, ideal for any living room',
       price: '₦800,000',
     },

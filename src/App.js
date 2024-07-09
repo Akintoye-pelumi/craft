@@ -13,8 +13,9 @@ function AppContent() {
   const location = useLocation();
   return (
     <div className="App">
-      {/* <BrowserRouter> */}
-      <Navbar />
+
+      {location.pathname !== '/' && <Navbar />}
+      {/* <Navbar /> */}
       {/* <Header /> */}
       {/* {location.pathname !== '/payment' && <Header />}
       {location.pathname !== '/cart' && <Header />} */}

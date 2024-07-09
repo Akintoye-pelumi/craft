@@ -2,6 +2,7 @@ import React from 'react'
 import bank from '../Component/Assets/bank.png'
 import paypal from '../Component/Assets/paypal.png'
 import creditcard from '../Component/Assets/creditcard.png'
+import {Link} from 'react-router-dom'
 
 const Payment = () => {
   return (
@@ -59,7 +60,10 @@ const Payment = () => {
             </div>
             
           </div>
+          <Link to='/checkout'>
           <button>Make Payment</button>
+          </Link>
+          
         </div>
       </div>
     </div>

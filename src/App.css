@@ -7,8 +7,6 @@ body{
   overflow-x: hidden;
 }
 .header{
-  /* background: #000000B2; */
-  /* background-image: url(../src/Component/Assets/pexels-heyho-6538898\ 1.png); */
   background: linear-gradient(rgba(51, 51, 51, 0.5), rgba(51, 51, 51, 0.5)), url('../src/Component/Assets/pexels-heyho-6538898 1.png');
   background-position: center;
   position: relative;
@@ -74,6 +72,8 @@ body{
 }
 
 .custom-button1{
+  width: 118px;
+  height: 50px;
   background-color: #564E3B !important;
   color: white; 
   font-size: 16px !important; 
@@ -84,9 +84,18 @@ body{
   transition: background-color 0.3s !important; 
   white-space: nowrap !important;
   text-align: center !important;
+  font-family: 'Work Sans';
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 18.77px;
+  text-align: left;
+  padding-top: 12px !important;
+
 }
 
 .custom-button{
+  width: 194px !important;
+  height: 50px !important;
   background-color: #FFFFFF !important;
   color: #564E3B !important; 
   font-size: 16px !important; 
@@ -97,6 +106,7 @@ body{
   transition: background-color 0.3s !important; 
   white-space: nowrap !important;
   text-align: center !important;
+  padding-top: 12px !important;
 }
 
 .productlist{
@@ -170,6 +180,7 @@ body{
   line-height: 28.15px;
   text-align: left;
   color: #6C0345;
+  margin-left: 120px;
 }
 
 .item-details {
@@ -181,7 +192,7 @@ body{
 .cart-button{
   width: 111px;
   height: 50px;
-  padding: 10px 0px 0px 0px;
+  padding: 10px;
   gap: 10px;
   border-radius: 5px;
   opacity: 0px;
@@ -191,13 +202,19 @@ body{
 }
 
 .item-card{
-  width: 400px;
+  width: 370px;
   height: 380px;
   padding: 10px 20px;
   background-color: white;
   border-radius: 8px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-  margin: 30px 20px;
+  margin: 20px; 
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 10px;
+  margin-bottom: -20px;
+  margin-left: 30px;
 }
 
 .about{
@@ -617,4 +634,158 @@ cursor: pointer;
   font-size: 20px;
   font-weight: 500;
   line-height: 23.46px;
+}
+
+.checkout{
+  width: 822px;
+  height: 640px;
+  margin-top: 40px;
+  margin-left: 309px;
+  margin-bottom: 100px;
+  gap: 0px;
+  opacity: 0px;
+  background: #FFFFFF;
+  display: flex;
+  flex-direction: column;
+
+}
+
+.checkout-success{
+  width: 318px;
+  height: 62px;
+  margin-top: 33px;
+  margin-left: 300px;
+  gap: 5px;
+}
+
+.checkout-success h1{
+  font-family: 'Work Sans';
+  font-size: 32px;
+  font-weight: 500;
+  line-height: 37.54px;
+  color: #000000;
+
+}
+
+.checkout-success p{
+  font-family: Work Sans;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 18.77px;
+  text-align: center;
+  margin-right: 60px;
+}
+
+.checkout-image{
+  width: 131px;
+  height: 131px;
+  margin-top: 17px;
+  margin-left: 346px;
+  padding: 10.92px;
+}
+
+.checkout-details{
+  display: flex;
+  /* justify-content: space-between; */
+  width: 477px;
+  height: 139px;
+  gap: 25px;
+  margin-left: 280px;
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
+
+.checkout-detail {
+  width: 117px;
+  /* height: 139px; */
+  gap: 5px;
+}
+
+.checkout-detail p{
+  font-family: 'Work Sans';
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 18.77px;
+  text-align: left;
+  color: #000000;
+
+}
+
+.checkout-det{
+  width: 335px;
+  /* height: 139px; */
+  gap: 5px;
+}
+
+.checkout-det p{
+  font-family: 'Work Sans';
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 18.77px;
+  text-align: left;
+  color: #000000;
+}
+
+.checkout-button{
+  width: 169px;
+  height: 39px;
+  margin-top: 49px;
+  margin-left: 327px;
+  padding: 10px 0px 0px 0px;
+  gap: 10px;
+  border-radius: 3px;
+}
+
+.checkout-button button{
+  background: #564E3B;
+  color: #FFFFFF;
+  font-family: Work Sans;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 18.77px;
+}
+
+.need-help{
+  width: 77px;
+  height: 16px;
+  margin-top: 20px;
+  margin-left: 12px;
+  font-family: 'Work Sans';
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 16.42px;
+  text-align: left;
+  color: #000000;
+
+}
+
+.need-help2{
+  width: 532px;
+  height: 16px;
+  margin-top: 0px;
+  margin-left: 12px;
+  font-family: 'Work Sans';
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 14.08px;
+  text-align: left;
+  color: #000000;
+  padding-top: 0;
+}
+
+.checkout-contact{
+  display: flex;
+  gap: 15px;
+  /* width: 243px; */
+  margin-left: 12px;
+
+}
+
+.checkout-contact p{
+  font-family: 'Work Sans';
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 16.42px;
+  text-align: left;
+  color: #000000; 
 }

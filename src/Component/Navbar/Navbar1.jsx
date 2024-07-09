@@ -1,16 +1,18 @@
+
 import Button from 'react-bootstrap/Button';
 import Container from 'react-bootstrap/Container';
 import Form from 'react-bootstrap/Form';
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
 import logo from '../Assets/logo.png'
-import './Navbar.css'
+import './Navbar1.css'
 import cart from '../Assets/cart.png'
 import user from '../Assets/user.png'
+import search from '../Assets/search.png'
 
-function NavScrollExample() {
+function Navbar1() {
   return (
-    <Navbar expand="lg" className="bg-body-light navbar">
+    <Navbar expand="lg" className="bg-body-light navbar1">
       <Container>
         <div className="logo-name1">
           <img src={logo}  />
@@ -26,14 +28,26 @@ function NavScrollExample() {
             <Nav.Link href="#action1" className="nav-link">Home</Nav.Link>
             <Nav.Link href="#action2"  className="nav-link">Contact Us </Nav.Link>
             <Nav.Link href="#"  className="nav-link">Shop</Nav.Link>
-            <Nav.Link href="#"  className="nav-link">About</Nav.Link>
+            <Nav.Link href="#about"  className="nav-link">About</Nav.Link>
           </Nav>
-          <div className='nav-cart'> <img src={cart} />
+          <Form className="d-flex search-bar">
+            <div className="search-icon">
+              <img src={search} alt='search-icon'/>
+            </div>
+            <Form.Control
+              type="search"
+              placeholder="Search"
+              className="me-2"
+              aria-label="Search"
+            />
+            {/* <Button variant="outline-success"> <CiShoppingCart /> <CiUser /></Button> */}
+            <div className='nav-cart'> <img src={cart} />
             <img src={user} /> </div>
+          </Form>
         </Navbar.Collapse>
       </Container>
     </Navbar>
   );
 }
 
-export default NavScrollExample;
+export default Navbar1;

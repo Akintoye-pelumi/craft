@@ -1,12 +1,12 @@
 import React from 'react'
-import Navbar from '../Component/Navbar/Navbar'
+import Navbar1 from './Navbar/Navbar1'
 import { Button } from 'react-bootstrap'
 // import './App.css';
 
 const Header = () => {
   return (
     <div className='header'>
-        <Navbar />
+        <Navbar1 />
         <div className='header-text'>
             <h3>CRAFTED FOR COMFORT, DESIGNED FOR LIFE</h3>
             <p>Experience the perfect harmony of craftsmanship and modern design.</p>

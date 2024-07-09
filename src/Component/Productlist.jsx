@@ -18,7 +18,7 @@ const Productlist = () => {
         ))}    
       </div> 
     </div>
-    <div className='about'>
+    <div className='about' id='about'>
       <div className="about-us">
       <h1>About Us</h1>
       <p>We at Craft believe that your home should represent who you are. We're committed to giving you fashionable, high-quality furniture so you can design rooms you'll love. Our carefully chosen collections are meant to uplift and make your living spaces cosy, useful, and visually stunning.</p>  
