@@ -845,6 +845,7 @@ cursor: pointer;
 @media (max-width: 375px) {
   .header-text {
     width: 90%;
+    height: 46px;
     margin-left: 5%;
     margin-top: 250px;
   }
@@ -878,3 +879,5 @@ cursor: pointer;
     padding: 10px;
   }
 }
+
+

@@ -1,7 +1,6 @@
 import React from 'react'
 import Navbar1 from './Navbar/Navbar1'
 import { Button } from 'react-bootstrap'
-// import './App.css';
 
 const Header = () => {
   return (

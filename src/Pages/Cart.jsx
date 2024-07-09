@@ -1,5 +1,4 @@
 import React from 'react'
-import Navbar from '../Component/Navbar/Navbar'
 import cart2 from '../Component/Assets/cart2.png'
 import cart1 from '../Component/Assets/cart1.png'
 import cart3 from '../Component/Assets/cart3.png'

@@ -1,12 +1,11 @@
-import Button from 'react-bootstrap/Button';
 import Container from 'react-bootstrap/Container';
-import Form from 'react-bootstrap/Form';
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
 import logo from '../Assets/logo.png'
 import './Navbar.css'
 import cart from '../Assets/cart.png'
 import user from '../Assets/user.png'
+import {Link} from 'react-router-dom'
 
 function NavScrollExample() {
   return (
@@ -28,7 +27,7 @@ function NavScrollExample() {
             <Nav.Link href="#"  className="nav-link">Shop</Nav.Link>
             <Nav.Link href="#"  className="nav-link">About</Nav.Link>
           </Nav>
-          <div className='nav-cart'> <img src={cart} />
+          <div className='nav-cart'> <Link to='/cart'> <img src={cart}/></Link>  
             <img src={user} /> </div>
         </Navbar.Collapse>
       </Container>
