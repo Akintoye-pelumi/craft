@@ -87,31 +87,31 @@
 
 @media (max-width: 768px) {
     .navbar {
-        flex-direction: column; /* Stack items vertically */
-        height: auto; /* Allow navbar to expand based on content */
+        flex-direction: column; 
+        height: auto; 
     }
 
     .logo-name {
-        margin-bottom: 20px; /* Add spacing below logo */
-        text-align: center; /* Center align logo */
+        margin-bottom: 20px; 
+        text-align: center; 
     }
 
     .bg-body-light img {
-        margin: 15px auto; /* Center align image */
+        margin: 15px auto; 
     }
 
     .nav-menu {
-        flex-direction: column; /* Stack menu items vertically */
-        gap: 10px; /* Adjust gap between menu items */
-        text-align: center; /* Center align menu items */
+        flex-direction: column; 
+        gap: 10px; 
+        text-align: center; 
     }
 
     .nav-cart {
-        margin: 10px auto; /* Center align cart */
+        margin: 10px auto; 
     }
 
     .me-auto {
-        justify-content: center; /* Center align search and user icons */
-        margin-top: 10px; /* Add spacing above search and user icons */
+        justify-content: center; 
+        margin-top: 10px; 
     }
 }
