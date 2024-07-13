@@ -12,7 +12,7 @@ const Productlist = () => {
   useEffect(() => {
   const fetchProducts = async () => {
     try {
-      const response = await fetch(`/api/products?organization_id=bd69447b6c844e51898b7defad628fd1&reverse_sort=false&page=1&Appid=J5W67RSC78B84Y2&Apikey=2517b21ed8b3426b98f5e10ceee4d83920240712125230361802`);
+      const response = await fetch(` https://timbu-get-all-products.reavdev.workers.dev/products?organization_id=bd69447b6c844e51898b7defad628fd1&reverse_sort=false&page=1&Appid=J5W67RSC78B84Y2&Apikey=2517b21ed8b3426b98f5e10ceee4d83920240712125230361802`);
       if (!response.ok) {
         throw new Error('Network response was not ok');
       }
