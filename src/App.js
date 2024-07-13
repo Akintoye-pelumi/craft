@@ -5,6 +5,7 @@ import Home from './Pages/Home';
 import Cart from './Pages/Cart';
 import Payment from './Pages/Payment';
 import Checkout from './Pages/Checkout';
+import ProductDetails from './Pages/ProductDetails';
 import { CartProvider } from './Component/CartContext';
 
 function AppContent() {
@@ -18,6 +19,7 @@ function AppContent() {
         <Route path='/cart' element={<Cart/>}/>
         <Route path='/payment' element={<Payment/>}/>
         <Route path='/checkout' element={<Checkout/>}/>
+        <Route path='/product/:productId' element={<ProductDetails />} />
       </Routes>
     </div>
   );

@@ -26,7 +26,7 @@ const Cart = () => {
       </div>
       <div className='line3'></div>
       {cartItems.length === 0 ? (
-        <p>Your cart is empty</p>
+        <p className='empty-cart'>Your cart is empty</p>
       ) : (
         cartItems.map((item, index) => {
           const price = item.price && item.price.length > 0 && item.price[0].NGN && item.price[0].NGN.length > 0 ? item.price[0].NGN[0] : 0;
@@ -52,7 +52,7 @@ const Cart = () => {
       )}
       {cartItems.length > 0 && (
         <>
-          <button onClick={clearCart}>Clear Cart</button>
+          <button onClick={clearCart} className='clear-cart'>Clear Cart</button>
           <div className="cart-sum">
             <h1>Order Summary</h1>
             <div className="cart-det">
