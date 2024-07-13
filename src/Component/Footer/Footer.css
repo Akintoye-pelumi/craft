@@ -191,7 +191,7 @@
     }
     
     .footer-social {
-        display: none; /* Hide social icons on smaller screens */
+        display: none; 
     }
 }
 

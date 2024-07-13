@@ -1,12 +1,11 @@
 import './App.css';
 import Navbar from './Component/Navbar/Navbar';
-import Header from '../src/Component/Header';
 import { BrowserRouter,Routes,Route,useLocation } from 'react-router-dom';
 import Home from './Pages/Home';
-import Products from './Pages/Products';
 import Cart from './Pages/Cart';
 import Payment from './Pages/Payment';
 import Checkout from './Pages/Checkout';
+import { CartProvider } from './Component/CartContext';
 
 function AppContent() {
   const location = useLocation();
@@ -27,7 +26,9 @@ function AppContent() {
 function App() {
   return (
     <BrowserRouter>
-      <AppContent />
+      <CartProvider>
+        <AppContent />
+      </CartProvider> 
     </BrowserRouter>
   );
 }

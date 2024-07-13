@@ -1,87 +1,86 @@
-import React from 'react'
-import cart2 from '../Component/Assets/cart2.png'
-import cart1 from '../Component/Assets/cart1.png'
-import cart3 from '../Component/Assets/cart3.png'
-import Dropdown from '../Component/Dropdown'
-import {Link} from 'react-router-dom'
+import React, { useState } from 'react';
+import { useCart } from '../Component/CartContext';
+import { Link } from 'react-router-dom';
+import Dropdown from '../Component/Dropdown'; 
 
 const Cart = () => {
+  const { cartItems, removeFromCart, clearCart } = useCart();
+  const [quantities, setQuantities] = useState({});
+
+  const handleQuantityChange = (itemId, quantity) => {
+    setQuantities((prev) => ({ ...prev, [itemId]: quantity }));
+  };
+
+  const getTotalPrice = () => {
+    return cartItems.reduce((sum, item) => {
+      const price = item.price && item.price.length > 0 && item.price[0].NGN && item.price[0].NGN.length > 0 ? item.price[0].NGN[0] : 0;
+      const quantity = quantities[item.id] || 1; 
+      return sum + (price * quantity);
+    }, 0);
+  };
+
   return (
     <div>
       <div className='cart'>
         <h1>Cart</h1>
       </div>
       <div className='line3'></div>
-      <div className='cart-card'>
-        <div className='cart-img'>
-            <img src={cart2} alt="" />
-            <div className='cart-des'>
-                <h4>A complete set of sofas</h4>
-                <p>A perfect blend of comfort and contemporary style, ideal for any living room.</p>
-                <div className="cart-drop">
-                    <Dropdown/>
-                    <p className='cart-price'>₦800,000</p>
+      {cartItems.length === 0 ? (
+        <p>Your cart is empty</p>
+      ) : (
+        cartItems.map((item, index) => {
+          const price = item.price && item.price.length > 0 && item.price[0].NGN && item.price[0].NGN.length > 0 ? item.price[0].NGN[0] : 0;
+          const quantity = quantities[item.id] || 1; 
+
+          return (
+            <div className='cart-card' key={index}>
+              <div className='cart-img'>
+                <img src={item.photos && item.photos.length > 0 && item.photos[0].url ? `https://api.timbu.cloud/images/${item.photos[0].url}` : 'default-image-url'} alt="" />
+                <div className='cart-des'>
+                  <h4>{item.name}</h4>
+                  <p>{item.description}</p>
+                  <div className="cart-drop">
+                    <Dropdown quantity={quantity} setQuantity={(qty) => handleQuantityChange(item.id, qty)} />
+                    <p className='cart-price'>₦{price * quantity}</p>
+                  </div>
                 </div>
-                
+                <p className='remove' onClick={() => removeFromCart(item.id)}>Remove</p>
+              </div>
             </div>
-            <p className='remove'>Remove</p>
-        </div>  
-      </div>
-      <div className='cart-card'>
-        <div className='cart-img'>
-            <img src={cart1} alt="" />
-            <div className='cart-des'>
-                <h4>A king-sized bed</h4>
-                <p>Experience unmatched comfort and elegance with our premium bed.</p>
-                <div className="cart-drop">
-                    <Dropdown/>
-                    <p className='cart-price'>₦1,300,999</p>
-                </div>
-                
+          );
+        })
+      )}
+      {cartItems.length > 0 && (
+        <>
+          <button onClick={clearCart}>Clear Cart</button>
+          <div className="cart-sum">
+            <h1>Order Summary</h1>
+            <div className="cart-det">
+              <div className="cart-details">
+                <p>Sub Total</p>
+                <p>Discount</p>
+                <p>Shipping Fee</p>
+                <p>Tax</p>
+                <p>Total</p>
+              </div>
+              <div className="detail-price">
+                <p>₦{getTotalPrice()}</p>
+                <p>5% Off</p>
+                <p>₦150,000</p>
+                <p>₦0</p>
+                <p>₦{getTotalPrice() * 0.95 + 150000}</p>
+              </div>
             </div>
-            <p className='remove'>Remove</p>
-        </div>  
-      </div>
-      <div className='cart-card'>
-        <div className='cart-img'>
-            <img src={cart3} alt="" />
-            <div className='cart-des'>
-                <h4>6-seater dining set for family</h4>
-                <p>Enjoy your meals in comfort with our elegantly upholstered dining chairs.</p>
-                <div className="cart-drop">
-                    <Dropdown/>
-                    <p className='cart-price'>₦800,999</p>
-                </div>
-                
-            </div>
-            <p className='remove'>Remove</p>
-        </div>  
-      </div>
-      <div className="cart-sum">
-        <h1>Order Summary</h1>
-        <div className="cart-det">
-        <div className="cart-details">
-            <p>Sub Total</p>
-            <p>Discount</p>
-            <p>Shipping Fee</p>
-            <p>Tax</p>
-            <p>Total</p>
-        </div>
-        <div className="detail-price">
-            <p>₦2,901,998</p>
-            <p>5% Off</p>
-            <p>₦150,000</p>
-            <p>₦0</p>
-            <p>₦2,906,898</p>
-        </div>
-        </div>
-        <Link to='/payment'>
-        <button>Proceed to Checkout</button>
-        </Link>
-        
-      </div>
+            <Link to='/payment'>
+              <button>Proceed to Checkout</button>
+            </Link>
+          </div>
+        </>
+      )}
     </div>
-  )
-}
+  );
+};
 
 export default Cart;
+
+
