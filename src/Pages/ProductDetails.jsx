@@ -1,4 +1,3 @@
-// src/Pages/ProductDetails.jsx
 import React, { useState, useEffect } from 'react';
 import { useParams } from 'react-router-dom';
 
@@ -16,9 +15,11 @@ const ProductDetails = () => {
           throw new Error('Network response was not ok');
         }
         const data = await response.json();
+        console.log('Fetched Product:', data); 
         setProduct(data);
         setLoading(false);
       } catch (err) {
+        console.error('Fetch error:', err);
         setError(err.message);
         setLoading(false);
       }
@@ -45,11 +46,10 @@ const ProductDetails = () => {
 
   return (
     <div className='product-details'>
-      <img src={product.photos && product.photos.length > 0 && product.photos[0].url ? `https://api.timbu.cloud/images/${product.photos[0].url}` : 'default-image-url'} alt="" />
+      <img src={product.photos && product.photos.length > 0 && product.photos[0].url ? `https://api.timbu.cloud/images/${product.photos[0].url}` : 'default-image-url'} alt={product.name || 'Product Image'} />
       <h1>{product.name}</h1>
       <p>{product.description}</p>
       <p>Price: ₦{price}</p>
-      {/* Add more product details as needed */}
     </div>
   );
 };

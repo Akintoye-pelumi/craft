@@ -893,6 +893,10 @@ cursor: pointer;
     width: 90%;
     margin: 10px auto;
   }
+  .cart-card {
+    width: auto;
+    margin-left: 10px;
+  }
 }
 
 @media (max-width: 375px) {
